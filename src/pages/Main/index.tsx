@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Content } from './styles';
 
 const Main: React.FC = () => {
@@ -12,7 +13,7 @@ const Main: React.FC = () => {
           Enviar vídeo para o YouTube 2aaaaaaaaa
         </label>
 
-        <a href="teste2.html">Teste 2</a>
+        <Link to="geolocation">Geolocalização</Link>
       </Content>
     </Container>
   );
