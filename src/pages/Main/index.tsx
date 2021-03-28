@@ -15,6 +15,7 @@ const Main: React.FC = () => {
 
         <Link to="geolocation">Geolocalização</Link>
         <Link to="camera">Câmera</Link>
+        <Link to="stream-api">Stream API</Link>
       </Content>
     </Container>
   );

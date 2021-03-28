@@ -38,13 +38,7 @@ const StreamAPI: React.FC = () => {
     try {
       if (videoRef.current && canvasRef.current) {
         const context = canvasRef.current?.getContext('2d');
-        context?.drawImage(
-          videoRef.current,
-          0,
-          0,
-          videoRef.current.videoWidth,
-          videoRef.current.videoHeight,
-        );
+        context?.drawImage(videoRef.current, 0, 0, 640, 480);
       }
     } catch (err) {
       // console.log(err);
@@ -57,9 +51,15 @@ const StreamAPI: React.FC = () => {
         <h1>Stream API</h1>
 
         <div>
-          <video id="video-source" autoPlay ref={videoRef} />
+          <video
+            id="video-source"
+            height="480"
+            width="640"
+            autoPlay
+            ref={videoRef}
+          />
         </div>
-        <canvas ref={canvasRef}>
+        <canvas ref={canvasRef} height="480" width="640">
           Seu dispositivo não tem suporte ao recurso de canvas do HTML5
         </canvas>
 
