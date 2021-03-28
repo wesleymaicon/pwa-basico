@@ -31,13 +31,15 @@ const Geolocation: React.FC = () => {
   };
 
   const getPosition = () => {
-    const options: PositionOptions = {
-      enableHighAccuracy: true,
-      timeout: 10000,
-      maximumAge: 5000,
-    };
+    if (navigator.geolocation) {
+      const options: PositionOptions = {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 5000,
+      };
 
-    navigator.geolocation.getCurrentPosition(geoSuccess, geoError, options);
+      navigator.geolocation.getCurrentPosition(geoSuccess, geoError, options);
+    } else alert('Dispositivo não tem suporte à geolocalização');
   };
 
   return (
