@@ -44,7 +44,7 @@ const CameraAPI: React.FC = () => {
           disabled={numberOfCameras <= 1}
           onClick={() => {
             if (camera.current) {
-              const result = camera.current.switchCamera();
+              // const result = camera.current.switchCamera();
               // console.log(result);
             }
           }}
