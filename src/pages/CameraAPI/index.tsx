@@ -35,7 +35,7 @@ const CameraAPI: React.FC = () => {
           onClick={() => {
             if (camera.current) {
               const photo = camera.current.takePhoto();
-              console.log(photo);
+              // console.log(photo);
               setImage(photo);
             }
           }}
@@ -45,7 +45,7 @@ const CameraAPI: React.FC = () => {
           onClick={() => {
             if (camera.current) {
               const result = camera.current.switchCamera();
-              console.log(result);
+              // console.log(result);
             }
           }}
         />
