@@ -38,9 +38,11 @@ const StreamAPI: React.FC = () => {
     try {
       // if (videoRef.current && canvasRef.current) {
       const context = canvasRef.current?.getContext('2d');
-      const imageSource = videoRef.current as CanvasImageSource;
+      const videoSource = document.getElementById(
+        'video-source',
+      ) as HTMLVideoElement;
 
-      context?.drawImage(imageSource, 0, 0, 1024, 1024);
+      context?.drawImage(videoSource, 0, 0, 1024, 1024);
       // }
     } catch (err) {
       // console.log(err);
@@ -53,7 +55,13 @@ const StreamAPI: React.FC = () => {
         <h1>Stream API</h1>
 
         <div>
-          <video autoPlay width="100" height="100" ref={videoRef} />
+          <video
+            id="video-source"
+            autoPlay
+            width="100"
+            height="100"
+            ref={videoRef}
+          />
         </div>
 
         <canvas width="1024" height="1024" ref={canvasRef} hidden>
