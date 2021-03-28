@@ -42,7 +42,7 @@ const StreamAPI: React.FC = () => {
         'video-source',
       ) as HTMLVideoElement;
 
-      context?.drawImage(videoSource, 0, 0, 1024, 1024);
+      context?.drawImage(videoSource, 0, 0);
       // }
     } catch (err) {
       // console.log(err);
